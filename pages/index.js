@@ -4,7 +4,7 @@ import { client } from "../lib/client";
 
 import { Product, FooterBanner, HeroBanner } from "../components/index.js"
 
-const Home = ({  pwoducts, bannerData }) => {
+const Home = ({  products, bannerData }) => {
   return (
     <>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
@@ -15,12 +15,12 @@ const Home = ({  pwoducts, bannerData }) => {
       </div>
 
       <div className='products-container'>
-        {pwoducts?. map(
-          (product) => product.name
+        {products?.map(
+          (product) => <Product key = {product._id} product = {product}/>
         )}
       </div>
 
-      <FooterBanner />
+      <FooterBanner footerBanner = {bannerData && bannerData [0]} />
     </>
   )
 };
