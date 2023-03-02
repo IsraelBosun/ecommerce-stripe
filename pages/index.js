@@ -4,10 +4,10 @@ import { client } from "../lib/client";
 
 import { Product, FooterBanner, HeroBanner } from "../components/index.js"
 
-const Home = () => {
+const Home = ({  pwoducts, bannerData }) => {
   return (
     <>
-      <HeroBanner />
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]}/>
 
       <div className='products-heading'>
         <h2>Best Selling Products</h2>
@@ -15,14 +15,26 @@ const Home = () => {
       </div>
 
       <div className='products-container'>
-        {["Product1", "Product 2"]. map(
-          (product) => product
+        {pwoducts?. map(
+          (product) => product.name
         )}
       </div>
 
       <FooterBanner />
     </>
   )
+};
+
+export const getServerSideProps = async () => {
+  const query = `*[_type == "product"]`;
+  const products = await client.fetch(query);
+
+  const bannerQuery = `*[_type == "banner"]`;
+  const bannerData = await client.fetch(bannerQuery);
+
+  return {
+    props: { products, bannerData}
+  }
 }
 
 export default Home
