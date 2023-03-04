@@ -10,10 +10,13 @@ export const StateContext = ({ children }) => {
     const [totalQuantities, setTotalQuantities] = useState(0);
     const [qty, setQty] = useState(1);
 
+    let foundProduct;
+    let index;
+
     // to add to cart
 
     const onAdd = (product, quantity) => {
-        const checkProductInCart = cartItems.find((item) => item._id === product.id)
+        const checkProductInCart = cartItems.find((item) => item._id === product._id);
 
         setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity)
@@ -34,6 +37,42 @@ export const StateContext = ({ children }) => {
         }
 
         toast.success(`${qty} ${product.name} added to cart.`);
+    }
+
+    // to remove items from cart
+
+    const onRemove = (product) => {
+        foundProduct = cartItems.find((item) => item._id === product._id)
+        const newCartItems2 = cartItems.filter((item) => item._id !== product._id);
+
+        setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity);
+        setTotalQuantities(prevTotalQuantities => prevTotalQuantities -foundProduct.quantity);
+        setCartItems(newCartItems2);
+    }
+
+
+
+        // to increase and decrease cart
+
+    const toggleCartItemQuantity = (id, value ) => {
+        foundProduct = cartItems.find((item) => item._id === id)
+        index = cartItems.findIndex((product) => product._id === id);
+
+            const newCartItems2 = cartItems.filter((item) => item._id !== id)
+        if(value === "inc") {
+          let newCartItems = [ ...newCartItems2, { ... foundProduct, quantity: foundProduct.quantity + 1}]
+          setCartItems(newCartItems);
+          setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
+          setTotalQuantities (prevTotalQuantities => prevTotalQuantities + 1)
+        } else if (value === "dec") {
+            if (foundProduct.quantity > 1){
+               let newCartItems = [ ...newCartItems2, { ... foundProduct, quantity: foundProduct.quantity - 1}]
+                setCartItems(newCartItems);
+                setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
+                setTotalQuantities (prevTotalQuantities => prevTotalQuantities - 1)  
+            }
+           
+        }
     }
 
     //to increment and decrement
@@ -61,7 +100,9 @@ export const StateContext = ({ children }) => {
             qty,
             incQty,
             decQty,
-            onAdd
+            onAdd,
+            toggleCartItemQuantity,
+            onRemove
         }}
         >
             {children}
