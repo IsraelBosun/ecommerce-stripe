@@ -20,6 +20,7 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
+    "react-paystack": "^4.0.2",
     "stripe": "^11.12.0"
   }
 }
