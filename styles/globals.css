@@ -432,11 +432,12 @@ padding: 20px 10px;
   border: none;
 }
 .cart-bottom{
-  /* position: absolute;
+  position: absolute;
   bottom: 12px;
+  background-color: white;
   right: 5px;
 width: 100%;
-padding: 30px 65px; */
+padding: 30px 65px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -755,6 +756,7 @@ margin-top: 160px;
     height: 350px;
   }
   .cart-container{
+    height:100vh;
     width: 415px;
     /* width: min-content; */
   padding: 44px;
