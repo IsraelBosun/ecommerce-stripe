@@ -17,7 +17,9 @@ body, * {
                           display: flex;
                           flex-direction: column;
                           align-items: center;
+                          justify-content: center;
                           margin: 2rem 0;
+                          gap: 1rem;
                         }
                         .form-div {
                           margin: 1rem 0;
@@ -29,11 +31,18 @@ body, * {
                         }
 
                         .form-field input {
-                          /* width: 100%; */
-                          padding: 10px;
+                          width: 100%;
+                          padding: 14px;
                           font-size: 16px;
+                          margin: 0 auto;
                           border: 1px solid #ddd;
-                          border-radius: 5px;
+                          border-radius: 25px;
+                          box-shadow:inset 5px 5px 8px #cbced1, inset -5px -5px 8px #ffffff;
+                          border: none;
+                        }
+
+                        .form-field input:hover {
+                          box-shadow: 5px 5px 8px #cbced1, -5px -5px 8px #ffffff
                         }
 
                         .form-field input:focus {
@@ -205,9 +214,9 @@ width: 100%;
 .hero-banner-image{
   position: absolute;
   top: 0%;
-  right:20%;
+  right:10%;
   width: 450px;
-  height: 450px;
+  /* height: 450px; */
 }
 
 
@@ -423,20 +432,28 @@ padding: 20px 10px;
   border: none;
 }
 .cart-bottom{
-  position: absolute;
+  /* position: absolute;
   bottom: 12px;
   right: 5px;
 width: 100%;
-padding: 30px 65px;
+padding: 30px 65px; */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 
 }
 
 .btn-container{
   width: 400px;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .PaystackButton {
+ 
   background: none;
   border: none;
 }
@@ -675,8 +692,8 @@ margin-top: 160px;
   .hero-banner-image{
     /* width: 77%; */
     width: 60%;
-    height: 52%;
-    top: 27%;
+    /* height: 52%; */
+    top: 30%;
     /* right: -6%; */
     right: 6%;
   }
@@ -689,7 +706,7 @@ margin-top: 160px;
     width: 70%;
     left: 30%;
     top: 6%;
-    height: 56%;
+    /* height: 56%; */
 
   }
   .banner-desc .left h3{

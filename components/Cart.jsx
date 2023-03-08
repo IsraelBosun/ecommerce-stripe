@@ -344,7 +344,7 @@ const Cart = () => {
           </div>
           <div className="form-field">
             <input
-              type="tel"
+              type="number"
               placeholder="Phone Number"
               name="phone"
               value={formData.phone}
