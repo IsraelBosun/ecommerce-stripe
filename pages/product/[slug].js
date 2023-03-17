@@ -34,7 +34,7 @@ const productDetails = ({ product, products }) => {
                 }
                   onMouseEnter = {() => setIndex(i)}
                   />
-                  ))}; 
+                  ))} 
                 </div>
               </div>
               <div className = "product-detail-desc">

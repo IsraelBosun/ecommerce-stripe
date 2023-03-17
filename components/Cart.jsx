@@ -261,7 +261,7 @@ const Cart = () => {
     },
     publicKey: "pk_live_6464b6529a3c9f897979c178339c9954faa5bed6", // Replace with your public key
     onSuccess: () => {
-      // Call your backend to verify payment was successful
+      // Call your backend to verify payment was successful 
       toast.success("Payment successful!");
     },
     onClose: () => {
