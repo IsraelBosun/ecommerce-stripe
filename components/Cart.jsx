@@ -332,34 +332,37 @@ const Cart = () => {
 
 
           <form>
-            <div className='form-div'>Please complete this form</div> 
-          <div className="form-field">
+            <div className='form-div'>Please complete this form to purchase</div> 
+          {/* <div className="form-field"> */}
             <input
               type="text"
               placeholder="Name"
               name="name"
               value={formData.name}
               onChange={handleInputChange}
+              className = "input"
             />
-          </div>
-          <div className="form-field">
+          {/* </div> */}
+          {/* <div className="form-field"> */}
             <input
               type="number"
               placeholder="Phone Number"
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
+              className = "input"
             />
-          </div>
-          <div className="form-field">
+          {/* </div> */}
+          {/* <div className="form-field"> */}
             <input
               type="email"
               placeholder="Email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
+              className = "input"
             />
-          </div>
+          {/* </div> */}
         </form>
         </div>
         {cartItems.length >= 1 && (
