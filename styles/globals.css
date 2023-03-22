@@ -349,7 +349,7 @@ text-align: end;
                                             outline: none;
                                             border-radius: 0.25rem;
                                             width: 100%;
-                                            max-width: 80%;
+                                            max-width: 50%;
                                             padding-left: 1rem;
                                             padding-right: 1rem;
                                             height: 3.5rem;
@@ -420,6 +420,7 @@ max-height: 70vh;
   display: flex;
  gap: 30px;
   padding: 20px;
+  justify-content: center;
 }
 .product .cart-product-image{
   width:180px ;
