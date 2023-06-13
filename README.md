@@ -3,7 +3,7 @@
 
 ![Banner](https://user-images.githubusercontent.com/70088342/160780701-7bb38a57-76bd-49a2-a4ec-49f89c50a7c7.png)
 
-## This is an eCommerce website built with Sanity, Next.js, and Paystack for payment processing. It allows users to browse and purchase products online.
+## This is an eCommerce website I built with Sanity, Next.js, and Paystack for payment processing. It allows users to browse and purchase products online.
 
 ## Table of Contents
 
@@ -11,20 +11,19 @@
 - [Usage](#usage)
 - [Features](#features)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/ecommerce-website.git
+   git clone https://github.com/IsraelBosun/ecommerce-stripe.git
 
 
 2. Install the dependencies:
 
 ```bash
-cd ecommerce-website
+cd ecommerce-stripe
 npm install
 ```
 
