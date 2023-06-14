@@ -1,8 +1,8 @@
 
-# ECommerce Website
+# Hydra E-Commerce Website
 
-![Banner](https://user-images.githubusercontent.com/70088342/160780701-7bb38a57-76bd-49a2-a4ec-49f89c50a7c7.png)
 
+![ecomm-hydra](https://github.com/IsraelBosun/ecommerce-stripe/assets/110021253/8bb6ba55-439f-47e3-9e87-65e741b95f3a)
 ## This is an eCommerce website I built with Sanity, Next.js, and Paystack for payment processing. It allows users to browse and purchase products online.
 
 ## Table of Contents
@@ -41,7 +41,9 @@ npm run dev
 2. Add products to your cart.
 3. Proceed to checkout and enter your shipping and payment details.
 4. Complete the payment process using Paystack.
-5. Receive a confirmation email with the order details.
+
+![hydra-ecomm](https://github.com/IsraelBosun/ecommerce-stripe/assets/110021253/be18b875-3ffd-43a8-ad26-9e3defeee56c)
+
 
 ## Features
 - User-friendly interface for browsing and purchasing products.
